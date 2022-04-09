@@ -80,6 +80,7 @@ nav ul li a:hover {
     text-decoration: none;
     margin : 85vh 0vw 90vh 94vw;  
     font-size: 3rem;
+    z-index: 100;
 }
 
 .btn{
@@ -196,56 +197,50 @@ line-height: 1.5rem;
    font-size: 5rem;
 }
 .about h3{
-    
     margin-top: 2rem;
     margin-left: 0px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 3rem;
     line-height: 3rem;
     color: var(--secondColor);
  }
- .about a {
-     margin: 0;
+.about a {
+margin: 0;
  }
- .secondSection{
-    display: flex;
-    justify-content: baseline;
-   }
+.secondSection{
+display: flex;
+}
 .hello2{
-      max-width: 50%;
-      height: 100%; 
-      margin-right: 5rem;
-   }
+ width: 100%;
+}
 .details{
-       width: 50vw;
-       position: absolute;
-       margin: 0;
-       right: 0;
-       padding-left: 2.5rem;
-       padding-right: 4rem;
-
-   }
+width: 50vw;
+position: absolute;
+margin: 0;
+right: 0;
+padding-left: 12px;
+padding-right: 1rem;
+}
 .details p{
     font-style: normal;
     font-size: larger;
     font-display: initial;
-    color: #ffffff;
+    color: var(--lightColor);
     margin-bottom: 2rem;
     line-height: 2rem;
     align-items: center;
     }
 .profileImage2{
-    width: 50vw;
-    height: 100%;
-    text-align: right;
+    width: 100%;
+    height: auto;
 }
-.profileImage2 img{   
-  display: block;
-  margin-left: -1rem;
+.profileImage2 img{     
+  margin-left: 0rem;
   margin-right: 0;
   margin-top: 4rem;
   width: 40%;
   transition: 0.9s ease;
+  left: 0;
 }
 .profileImage2 img:hover{   
  opacity: 0.5;
@@ -439,8 +434,23 @@ margin: 0;
 }
 nav ul {
   display: none;  
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bgColor-2);
 }
+nav ul.is-active{
+    display: block;
+  }
 
+nav ul li{
+    list-style-type: none;
+    display: block;
+    margin: 50px;
+    text-align: center;
+}
 nav 
 .btn{
     display: none;
@@ -512,55 +522,69 @@ margin-left: -2rem;
   /*-----------------------about Me Section----------------*/
 
 .about{
-    max-width: 100%;
-    max-height: 70vh;
-    overflow: hidden;
-    position: relative;
+width: 100%;
+height: 70vh;
+overflow: hidden;
+position: relative;
 }
 
 .about h2{
-   margin-top: 2rem;
-   margin-left: 0rem;
-   font-size: 2rem;
+margin-top: 2rem;
+margin-left: 0rem;
+font-size: 34px;
 }
-
+.about h3{
+margin-top: 1rem;
+margin-left: 0px;
+margin-bottom: 2rem;
+font-size: 22px;
+line-height: 2rem;
+color: var(--secondColor);
+}
+.secondSection{
+display: flex;
+margin-bottom: 2rem;
+}
 .profileImage2{
-    width: 50vw;
-    height: 100%;
-    text-align: right;
+width: 100%;
+height: 100%;
+text-align: right;
 }
 .profileImage2 img{   
-  display: block;
-  margin-left: -1rem;
-  margin-right: auto;
+  margin-right: 0;
   margin-top: 0;
   width: 40%;
   transition: 0.9s ease;
 }
-.about h3{
-    margin-top: 0rem;
-    margin-left: 0rem;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    color: var(--secondColor);
- }
- .about p {
-     font-size: 10px;
-     margin-bottom: 1rem;
- }
- .about a {
-     font-size: 10px;
-     margin-bottom: 0;
+.about a {
+font-size: 10px;
+margin-bottom: 0;
 }
-.circle:hover{   
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+.about{
+overflow: hidden;
+max-width: auto;
+max-height: 100vh;
+background-color: var(--bgColor-2);
+}
 
+.hello2{
+ width: 100%;
+}
+.details{
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     } 
+.details p{
+    margin-bottom: 0.5rem;
+    line-height: 2rem;
+    align-items: center;
+    text-align: center;
+    }
 /*-----------------------Services section----------------*/
 
 .services{
@@ -586,7 +610,7 @@ margin-left: -2rem;
     justify-content: center;
 }
 .card{
-  background-color: #312e2e;
+  background-color: var(--bgColor-2);
   border-radius: 1rem;
   max-width: 100%;
   max-height: 20%;
@@ -677,3 +701,29 @@ footer h4{
     }
 
 }
+
+/*****************Media Query -380px Width******************/
+
+@media screen and (max-width : 380px){
+   .secondSection{
+       margin-bottom: 0;
+   }
+   .about h2{
+    font-size: 28px;
+}
+   .about h3{
+       font-size: 20px;
+   }
+    .details{
+        margin: 0;
+        width: 100%;
+        }
+    .details p{
+            font-style: normal;
+            font-size: 14px;
+            font-display: initial;
+            margin-bottom: 10px;
+            line-height: 2rem;
+            }
+}
+
