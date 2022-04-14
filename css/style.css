@@ -700,6 +700,20 @@ footer h4{
     margin-top: 0.5rem;
     }
 
+#menu.is-active span:nth-child(1){
+    transform: translate(2px,-2px) rotate(45deg);
+    background-color: var(--secondColor);
+}   
+#menu.is-active span:nth-child(2){
+   /* transform: translateX(15px);*/
+    opacity: 0;
+}  
+#menu.is-active span:nth-child(3){
+    transform: translate(-2px,2px) rotate(-45deg);
+    background-color: var(--secondColor);
+
+} 
+
 }
 
 /*****************Media Query -380px Width******************/
